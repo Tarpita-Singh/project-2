@@ -5,8 +5,7 @@ body{
 }
 #home{
     top: 0;
-    /* background-color: brown; */
-    background-image: url('Water.png');
+    background-image: url('./images/Water.png');
     background-repeat: repeat;
     height: 100vh;
     width: 100vw;
@@ -20,8 +19,6 @@ h2{
 }
 
 #walkLeft{
-    /* margin-left: 500px; */
-    /* margin-top: 250px; */
     height: auto;
     width: 3vw;
     position:absolute;
@@ -31,8 +28,6 @@ h2{
 }
 #seller{
     cursor: pointer;
-    /* margin-left: 500px; */
-    /* margin-top: 250px; */
     height: auto;
     width: 4vw;
     position:absolute;
@@ -47,41 +42,36 @@ h2{
     height: 90vh;
     width: 93vw;
     background-repeat: repeat;
-    background-image: url("grass.png");
+    background-image: url("./images/grass.png");
     position: absolute;
     margin-right: 30px;
-    /* border: olive;
-    border-width: 10px; */
 }
 #grassEnd{
     background-repeat: repeat;
-    background-image: url("grassEnd.png");
+    background-image: url("./images/grassEnd.png");
     margin-right: 30px;
     top: 10vh;
     width: 93vw;
     height: 20px;
-    /* height: 90vh; */
     position: absolute;
     z-index: 1;
 }
 #grassEndSide{cursor: pointer;
     background-repeat: repeat;
-    background-image: url("grassEndSide.png");
+    background-image: url("./images/grassEndSide.png");
     margin-right: 30px;
     top: 10vh;
     width: 20px;
     height: 90vh;
-    /* height: 90vh; */
     position: absolute;
     margin-left: 93vw;
 }
 #grassEndCorner{
-    background-image: url("grassEndCorner.png");
+    background-image: url("./images/grassEndCorner.png");
     top: 10vh;
     width: 28px;
     height: 24px;
     object-fit: fill;
-    /* height: 90vh; */
     position: absolute;
     margin-left: 92.3vw;
     z-index: 3;
@@ -132,7 +122,6 @@ a:hover img:first-child {
 #space:hover{
     animation: bellshake .5s cubic-bezier(.36,.07,.19,.97) both;
     backface-visibility: hidden;
-    /* transform-origin: top right; */
 }
 #alien{
     cursor: pointer;
@@ -140,7 +129,6 @@ a:hover img:first-child {
     width: 8vw;
     height: auto;
     margin-left: 53vw;
-    /* animation-name: float; */
     animation-name: floating;
     animation-duration: 3s;
     animation-iteration-count: infinite;
@@ -151,7 +139,6 @@ a:hover img:first-child {
 }
 #alien:hover{
     animation-play-state: running;
-    /* display: none; */
 }
 @keyframes bellshake {
     0% { transform: rotate(0); }
@@ -209,10 +196,6 @@ a:hover img:first-child {
 #computer_on:hover{
     animation: blink 1s linear infinite;
 }
-/* #computer:hover{
-    animation: blink 1s linear infinite;
-} */
-
 #special img:last-child {
     display: none;  
 }
@@ -289,7 +272,6 @@ a:hover img:first-child {
     z-index: 3;
 }
 
-/* GROUP SIMILAR PROPERTIES TOGETHER */
 
 #figPy{
     position: absolute;
@@ -318,7 +300,6 @@ a:hover img:first-child {
     max-width: 8vw;
     text-align: center;
     font-size: 1.3vw;
-    /* margin-left: 1.5vw; */
     font-family: 'Kanit', sans-serif;
     font-family: 'Silkscreen', cursive;
     margin-left: 70vw;
@@ -330,7 +311,6 @@ a:hover img:first-child {
     max-width: 8vw;
     text-align: center;
     font-size: 1.3vw;
-    /* margin-left: 1.5vw; */
     font-family: 'Kanit', sans-serif;
     font-family: 'Silkscreen', cursive;
     margin-left: 53vw;
@@ -342,7 +322,6 @@ a:hover img:first-child {
     max-width: 10vw;
     text-align: center;
     font-size: 1.3vw;
-    /* margin-left: 1.5vw; */
     font-family: 'Kanit', sans-serif;
     font-family: 'Silkscreen', cursive;
     margin-left: 9vw;
@@ -350,25 +329,8 @@ a:hover img:first-child {
     margin-top: 56vh;
 }
 #invBtn:hover{
-    /* bottom: 10px; */
-    /* box-shadow: 0px 2px 0px 0px green;  */
-    /* animation-name: box_zoom;
-    animation-duration: 0.5s; */
-    /* box-shadow: 6px 6px 6px 6px rgba(0, 0, 0, 0.226); */
     transform: translateY(-2px) scale(1.3);
 }
-/* @keyframes box_zoom{
-    from{
-        opacity: 0;
-        transform: scale(0.1);
-        filter: hue-rotate(360deg);
-    }
-    to{
-        opacity: 1;
-        transform: scale(1);
-        filter: hue-rotate(0deg);
-    }
-} */
 #invBtn{
     cursor: pointer;
     position: absolute;
@@ -382,8 +344,6 @@ a:hover img:first-child {
 }
 #useless{
     position: absolute;
-    /* width: 8vw;
-    height: auto; */
     background: none;
     border: none;
 }
@@ -394,13 +354,12 @@ a:hover img:first-child {
 }
 
 .close{
-    /* display: none; */
     height: 40px;
     width: 40px;
     position: absolute;
     right: 5px;
     transition: 0.3s;
-    background: url('cross4.png');
+    background: url('./images/cross4.png');
     background-size: cover;
     border: none;
     z-index: 22;
@@ -408,29 +367,10 @@ a:hover img:first-child {
   
 .close:hover{
     cursor: pointer;
-    background: url('cross6.png');
+    background: url('./images/cross6.png');
     background-size: cover;
 }
 
-/* .close3{ */
-    /* display: none; */
-    /* height: 40px;
-    width: 40px;
-    position: absolute;
-    margin-top: 18vh;
-    margin-left: 53vw;
-    transition: 0.3s;
-    background: url('cross4.png');
-    background-size: cover;
-    border: none;
-    z-index: 22;
-} */
-/* 
-.close3:hover{
-    cursor: pointer;
-    background: url('cross6.png');
-    background-size: cover;
-} */
 
 #inv-screen{
     display: none;
@@ -440,27 +380,11 @@ a:hover img:first-child {
     height: 100%; 
     overflow: hidden; 
     background-color: rgba(0, 0, 0, 0);
-    /* background-color: rgba(255, 0, 0, 0.514); */
     animation-name: zoom;
     animation-duration: 0.5s;
     transform-origin: bottom right;
     z-index: 19;
 }
-
-/* #sellInv{
-    display: none;
-    position: fixed; 
-    /* text-align: center; */
-    /* width: 100%; 
-    height: 100%; 
-    overflow: hidden; 
-    background-color: rgba(0, 0, 0, 0);
-    animation-name: zoom;
-    animation-duration: 0.5s;
-    transform-origin: bottom left;
-    z-index: 19;
-}  */
-
   
 @keyframes zoom {
     from{
@@ -471,22 +395,13 @@ a:hover img:first-child {
     }
 }
 
-#canvas, #canvas3/*, #canvas4*/{
+#canvas, #canvas3{
     
-    /* background-image: url(inv_box.png); */
-    /* background-repeat: no-repeat; */
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
-    /* vertical-align: middle; */
-    /* top: 0;
-    height: 100vh;
-    width: 100vh;
-    min-width: 50px;
-    min-height: 50px; */
     overflow: hidden;
-    /* margin-left: 10vw; */
     z-index: 21;
     position: absolute;
 }
@@ -510,16 +425,7 @@ a:hover img:first-child {
 #drawInv{
     position: absolute;
     margin-left: 60vw;
-    /* display: none; */
-    /* z-index: 20; */
-    /* display: none; */
-    /* position: fixed;  */
-    /* text-align: center; */
-    /* width: 100%;  */
-    /* height: 100%;  */
     overflow: hidden; 
-    /* background-color: rgba(0, 0, 0, 0); */
-    /* background-color: rgba(255, 0, 0, 0.514); */
     animation-name: zoom;
     animation-duration: 0.5s;
     transform-origin: bottom right;
@@ -528,21 +434,9 @@ a:hover img:first-child {
 #sellInv{
     position: absolute;
     margin-left: 2vw;
-    /* display: none; */
 }
-
-/* .places{
-    display: flex;
-}
-.places:hover{
-    border: blue;
-    border-width: 12px;
-} */
 #potionRed, #potionBlue, #camera, #bottle, #cake2, #cake3{
-    /* position: absolute; */
     display: none;
-    /* z-index: 20; */
-    /* cursor: pointer; */
 }
 
 
@@ -589,25 +483,24 @@ a:hover img:first-child {
     margin-left: 42vw;
     margin-top: 60vh;
     transition: 0.3s;
-    background: url('enter.png');
+    background: url('./images/enter.png');
     background-size: cover;
     border: none;
     z-index: 22;
 }
 .enter:hover{
     cursor: pointer;
-    background: url('enter2.png');
+    background: url('./images/enter2.png');
     background-size: cover;
 }
 .close2{
     height: 40px;
     width: 40px;
     position: absolute;
-    /* right: 5px; */
     margin-left: 67vw;
     margin-top: 25px;
     transition: 0.3s;
-    background: url('cross1.png');
+    background: url('./images/cross1.png');
     background-size: cover;
     border: none;
     z-index: 22;
@@ -615,7 +508,7 @@ a:hover img:first-child {
   
 .close2:hover{
     cursor: pointer;
-    background: url('cross2.png');
+    background: url('./images/cross2.png');
     background-size: cover;
 }
 
@@ -631,15 +524,6 @@ a:hover img:first-child {
     width: 30vw;
     height: auto;
 }
-/* #confirm_purchase2{
-    display: none;
-    position: absolute;
-    margin-left: 35vw;
-    margin-top: 30vh;
-    z-index: 20;
-    width: 30vw;
-    height: auto;
-} */
 .yes, .yes2{
     display: none;
     height: 5.5%;
@@ -648,27 +532,14 @@ a:hover img:first-child {
     margin-left: 40vw;
     margin-top: 63vh;
     transition: 0.3s;
-    background: url('yes.png');
+    background: url('./images/yes.png');
     background-size: cover;
     border: none;
     z-index: 22;
 }
-/* .yes2{
-    display: none;
-    height: 5.5%;
-    width: 7%;
-    position: absolute;
-    margin-left: 40vw;
-    margin-top: 63vh;
-    transition: 0.3s;
-    background: url('yes.png');
-    background-size: cover;
-    border: none;
-    z-index: 22;
-} */
 .yes:hover, .yes2:hover{
     cursor: pointer;
-    background: url('yes1.png');
+    background: url('./images/yes1.png');
     background-size: cover;
 }
 .no, .no2{
@@ -679,26 +550,13 @@ a:hover img:first-child {
     margin-left: 52vw;
     margin-top:  63vh;
     transition: 0.3s;
-    background: url('no.png');
+    background: url('./images/no.png');
     background-size: cover;
     border: none;
     z-index: 22;
 }
-/* .no2{
-    display: none;
-    height: 5.5%;
-    width: 7%;
-    position: absolute;
-    margin-left: 52vw;
-    margin-top:  63vh;
-    transition: 0.3s;
-    background: url('no.png');
-    background-size: cover;
-    border: none;
-    z-index: 22;
-} */
 .no:hover, .no2:hover{
     cursor: pointer;
-    background: url('no1.png');
+    background: url('./images/no1.png');
     background-size: cover;
 }
