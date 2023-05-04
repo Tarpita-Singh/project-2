@@ -236,27 +236,27 @@ document.addEventListener('keydown', function(event){
 });
 
 function updateClick(current_key){
-    if(current_key == 39 && player.src.indexOf("./images/walk_right.gif") == -1){
+    if(current_key == 39 && player.src.indexOf("walk_right.gif") == -1){
         // console.log('key 39', player.src.indexOf("walk_right.gif"));
         player.src="./images/walk_right.gif";
     }
-    else if(current_key == 37 && player.src.indexOf("./images/walk_left.gif") == -1){
+    else if(current_key == 37 && player.src.indexOf("walk_left.gif") == -1){
         // console.log('key 37', player.src.indexOf("walk_left.gif"));
         player.src="./images/walk_left.gif";
     }
-    else if(current_key == 0 && player.src.indexOf("./images/stop_walk_left.gif") == -1){
+    else if(current_key == 0 && player.src.indexOf("stop_walk_left.gif") == -1){
         // console.log('key 0', player.src.indexOf("stop_walk_left.gif"));
         player.src="./images/stop_walk_left.gif";
     }
-    else if(current_key == 0 && player.src.indexOf("./images/stop_walk_right.gif") == -1){
+    else if(current_key == 0 && player.src.indexOf("stop_walk_right.gif") == -1){
         // console.log('key 0', player.src.indexOf("stop_walk_right.gif"));
         player.src="./images/stop_walk_right.gif";
     }
-    else if((current_key == 40 || current_key == 38) && player.src.indexOf("./images/walk_right.gif") == -1){
+    else if((current_key == 40 || current_key == 38) && player.src.indexOf("/walk_right.gif") == -1){
         // console.log('key 40', player.src.indexOf("walk_right.gif"));
         player.src="./images/walk_right.gif";
     }
-    else if((current_key == 40 || current_key == 38) && player.src.indexOf("./images/walk_left.gif") !== -1){
+    else if((current_key == 40 || current_key == 38) && player.src.indexOf("walk_left.gif") !== -1){
         // console.log('key 40', player.src.indexOf("walk_right.gif"));
         player.src="./images/walk_left.gif";
     }
