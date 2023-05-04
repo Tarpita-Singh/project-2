@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myPortfolio</title>
+</head>
+<link rel="stylesheet" href="portfolio.css">
+<body>
+    <script src="portfolio.js"></script>
+    <div class="topBar" id="topBarid">
+        <a id="current" href="#intro" onclick="clickInactive();">HOME</a>
+        <a id="current" href="#about" onclick="clickInactive();">ABOUT</a>
+        <a id="current" href="#projects" onclick="clickInactive();">PROJECTS</a>
+        <a id="current" href="#contact" class="last" onclick="clickInactive();">CONTACT</a>
+    </div>
+    <div class=intro id="intro">
+        <h1>Hi I'm Tarpita :)<br><br>I'm a 1st year Computer Science student.</h1>
+        <p>And i'm really excited to show you my first ever website-supposedly-portfolio! :D</p> 
+        <h3><br><br>Fur-Ball will guide you throughout this website.</h3>
+        <img src="furBall1.png" alt="Furr Ball">
+    </div>
+    <div class=about id="about">
+        <h2>ABOUT ME</h2>
+        <hr>
+        <div class="popup">
+            <img id="pfp" src="pfp.png" alt="Profile Picture">
+            <span class="popuptext">ayo!</span>
+        </div>
+        <p>My name is Tarpita Singh. I'm a Btech student at IIIT Surat, Computer Science Department. I was born in Nodia and have spent my childhood there, then i lived in Varanasi for the last 8 years, and now i'm looking forward to 4 adventurous years here in Surat :) <br><br>I like to sketch a lot, I've always wanted to be a professional artist but here I am making weird portfolios. (nah, i like doing this more :p) My other hobbies include running, playing badminton, speed-reading mystery novels, watching anime, scrolling memes for hours, spending days on rpg video games, daydreaming about things that will never happen, starting new projects i will never complete, crying myself to sleep, fantasising about-</p>
+        <img id="furball" src="furball2.png" alt="Fur Ball">
+        <br><br><br><br><br><br><br><br><br><br><br><br>
+    </div>
+    <div class=projects id="projects">
+        <h2>PROJECTS</h2>
+        <hr>
+        <img id="project1" src="project1.png" alt="Project 1" onClick="openProject1();">
+        <img id="project2" src="project2.png" alt="Project 2" onClick="openProject2();">
+        <img id="project3" src="project3.png" alt="Project 3" onClick="openProject3();">
+        <p id="p1">I did a little ASCII art because i was bored.<br>P.S. His name is Pepper.</p>
+        <p id="p2">Well... I also made this really amature <br> terminal maze game in C.</p>
+        <p id="p3">I also made the easiest game <br> on earth :(</p>
+        <img id="furball3" src="furball3.png" alt="Fur Ball">
+    </div>
+    <div class="contact" id="contact">
+        <h2>Contact Me</h2>
+        <hr>
+        <p id="p4">If you're still here... Feel free to get in touch. Thanks!</p>
+        <p id="p5"> RESUME <br><br> <a onclick="openvid()"> download </a></p>
+        <p id="p6"> EMAIL <br><br><a href="#">&lt;fakemail&gt;@iiitsurat.ac.in </a>  </p>
+    </div>
+    <footer>
+        <p>Copyright 2023 Tarpita Singh. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,704 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&family=Silkscreen&display=swap');
+
+body{
+    overflow: hidden;
+}
+#home{
+    top: 0;
+    /* background-color: brown; */
+    background-image: url('Water.png');
+    background-repeat: repeat;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    left: 0;
+}
+h2{
+    margin-left: 1vw;
+    font-family: 'Kanit', sans-serif;
+    font-family: 'Silkscreen', cursive;
+}
+
+#walkLeft{
+    /* margin-left: 500px; */
+    /* margin-top: 250px; */
+    height: auto;
+    width: 3vw;
+    position:absolute;
+    margin-left: 70px;
+    margin-top: 200px;
+    z-index: 3;
+}
+#seller{
+    cursor: pointer;
+    /* margin-left: 500px; */
+    /* margin-top: 250px; */
+    height: auto;
+    width: 4vw;
+    position:absolute;
+    margin-left: 47vw;
+    margin-top: 75vh;
+    z-index: 11;
+}
+#grass{
+    /* AREA : 33 x 27 blocks, each block width = 3vw and height = 3.7vh */
+    top: 10vh;
+    left: 0;
+    height: 90vh;
+    width: 93vw;
+    background-repeat: repeat;
+    background-image: url("grass.png");
+    position: absolute;
+    margin-right: 30px;
+    /* border: olive;
+    border-width: 10px; */
+}
+#grassEnd{
+    background-repeat: repeat;
+    background-image: url("grassEnd.png");
+    margin-right: 30px;
+    top: 10vh;
+    width: 93vw;
+    height: 20px;
+    /* height: 90vh; */
+    position: absolute;
+    z-index: 1;
+}
+#grassEndSide{cursor: pointer;
+    background-repeat: repeat;
+    background-image: url("grassEndSide.png");
+    margin-right: 30px;
+    top: 10vh;
+    width: 20px;
+    height: 90vh;
+    /* height: 90vh; */
+    position: absolute;
+    margin-left: 93vw;
+}
+#grassEndCorner{
+    background-image: url("grassEndCorner.png");
+    top: 10vh;
+    width: 28px;
+    height: 24px;
+    object-fit: fill;
+    /* height: 90vh; */
+    position: absolute;
+    margin-left: 92.3vw;
+    z-index: 3;
+}
+#pyramid{
+    cursor: pointer;
+    top: 23vh;
+    position: absolute;
+    width: 15vw;
+    height: auto;
+    margin-left: 27vw;
+    z-index: 11;
+}
+#pyramidWind{
+    cursor: pointer;
+    top: 23vh;
+    position: absolute;
+    width: 10vw;
+    height: auto;
+    margin-left: 30vw;
+    z-index: 11;
+}
+#house, #houseOpen{
+    top: 20vh;
+    position: absolute;
+    width: 8vw;
+    height: auto;
+    z-index: 11;
+    
+}
+a img:last-child {
+    display: none;  
+}
+a:hover img:last-child {
+    display: block;  
+}
+a:hover img:first-child {
+    display: none;  
+}
+#space{
+    cursor: pointer;
+    position: absolute;
+    width: 8vw;
+    height: auto;
+    margin-left: 70vw;
+    z-index: 11;
+}
+#space:hover{
+    animation: bellshake .5s cubic-bezier(.36,.07,.19,.97) both;
+    backface-visibility: hidden;
+    /* transform-origin: top right; */
+}
+#alien{
+    cursor: pointer;
+    position: absolute;
+    width: 8vw;
+    height: auto;
+    margin-left: 53vw;
+    /* animation-name: float; */
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-play-state: paused;
+    z-index: 11;
+    margin-top: 40vh;
+}
+#alien:hover{
+    animation-play-state: running;
+    /* display: none; */
+}
+@keyframes bellshake {
+    0% { transform: rotate(0); }
+    15% { transform: rotate(5deg); }
+    30% { transform: rotate(-5deg); }
+    45% { transform: rotate(4deg); }
+    60% { transform: rotate(-4deg); }
+    75% { transform: rotate(2deg); }
+    85% { transform: rotate(-2deg); }
+    92% { transform: rotate(1deg); }
+    100% { transform: rotate(0); }
+}
+
+/* ROBOTIC */
+@keyframes float{
+    from { transform: translate(0,  0px); }
+    65%  { transform: translate(0, 15px); }
+    to   { transform: translate(0, -0px); } 
+}
+
+/* MUCH LIVELY */
+@keyframes floating {
+	0% {
+		transform: translate(0%,0%);	
+	}
+	25% {
+		transform: translate(0%,15%);	
+	}	
+	50% {
+		transform: translate(0%,5%);	
+	}	
+	75% {
+		transform: translate(0%,15%);	
+	}	
+	100% {
+		transform: translate(0%,0%);
+	}			
+}
+@keyframes blink{
+    50% {
+        opacity: 0;
+      }    
+}
+#computer, #computer_on{
+    cursor: pointer;
+    position: absolute;
+    width: 10vw;
+    height: auto;
+    margin-left: 10vw;
+    z-index: 11;
+    margin-top: 40vh;
+}
+
+/* WORKING */
+#computer_on:hover{
+    animation: blink 1s linear infinite;
+}
+/* #computer:hover{
+    animation: blink 1s linear infinite;
+} */
+
+#special img:last-child {
+    display: none;  
+}
+#special:hover img:last-child {
+    display: block;  
+    transition-delay: 1s;
+}
+#special:hover img:first-child {
+    display: block;  
+}
+
+
+#tree{
+    position: absolute;
+    width: 5vw;
+    height: auto;
+    margin-top: 15vh;
+    z-index: 4;
+}
+#tree2{
+    position: absolute;
+    width: 5vw;
+    height: auto;
+    margin-top: 13vh;
+    margin-left: 5vw;
+    z-index: 4;
+}
+#bush1{
+    position: absolute;
+    width: 13vw;
+    height: auto;
+    margin-top: 63vh;
+    margin-left: 30vw;
+    z-index: 2;
+}
+#bush2{
+    position: absolute;
+    width: 17vw;
+    height: auto;
+    margin-top: 67vh;
+    margin-left: 70vw;
+    z-index: 4;
+}
+#tree3{
+    position: absolute;
+    width: 5vw;
+    height: auto;
+    margin-top: 13vh;
+    margin-left: 55vw;
+    z-index: 4;
+}
+#tree4{
+    position: absolute;
+    width: 5vw;
+    height: auto;
+    margin-top: 22vh;
+    margin-left: 58vw;
+    z-index: 4;
+}
+#tree5{
+    position: absolute;
+    width: 5vw;
+    height: auto;
+    margin-top: 88vh;
+    left: 5px;
+    z-index: 4;
+}
+#bridge{
+    position: absolute;
+    height: auto;
+    width: 10vw;
+    margin-top: 50vh;
+    margin-left: 92vw;
+    z-index: 3;
+}
+
+/* GROUP SIMILAR PROPERTIES TOGETHER */
+
+#figPy{
+    position: absolute;
+    margin-left: 27vw;
+    max-width: 15vw;
+    text-align: center;
+    font-size: 1.3vw;
+    font-family: 'Kanit', sans-serif;
+    font-family: 'Silkscreen', cursive;
+    z-index: 2;
+    margin-top: 27vh;
+}
+#figHo{
+    position: absolute;
+    max-width: 8vw;
+    text-align: center;
+    font-size: 1.3vw;
+    margin-left: 2vw;
+    font-family: 'Kanit', sans-serif;
+    font-family: 'Silkscreen', cursive;
+    z-index: 2;
+    margin-top: 16vh;
+}
+#figSp{
+    position: absolute;
+    max-width: 8vw;
+    text-align: center;
+    font-size: 1.3vw;
+    /* margin-left: 1.5vw; */
+    font-family: 'Kanit', sans-serif;
+    font-family: 'Silkscreen', cursive;
+    margin-left: 70vw;
+    z-index: 2;
+    margin-top: 16vh;
+}
+#figAl{
+    position: absolute;
+    max-width: 8vw;
+    text-align: center;
+    font-size: 1.3vw;
+    /* margin-left: 1.5vw; */
+    font-family: 'Kanit', sans-serif;
+    font-family: 'Silkscreen', cursive;
+    margin-left: 53vw;
+    z-index: 2;
+    margin-top: 60vh;
+}
+#figCo{
+    position: absolute;
+    max-width: 10vw;
+    text-align: center;
+    font-size: 1.3vw;
+    /* margin-left: 1.5vw; */
+    font-family: 'Kanit', sans-serif;
+    font-family: 'Silkscreen', cursive;
+    margin-left: 9vw;
+    z-index: 2;
+    margin-top: 56vh;
+}
+#invBtn:hover{
+    /* bottom: 10px; */
+    /* box-shadow: 0px 2px 0px 0px green;  */
+    /* animation-name: box_zoom;
+    animation-duration: 0.5s; */
+    /* box-shadow: 6px 6px 6px 6px rgba(0, 0, 0, 0.226); */
+    transform: translateY(-2px) scale(1.3);
+}
+/* @keyframes box_zoom{
+    from{
+        opacity: 0;
+        transform: scale(0.1);
+        filter: hue-rotate(360deg);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+        filter: hue-rotate(0deg);
+    }
+} */
+#invBtn{
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    background: none;
+    border: none;
+    z-index: 5;
+}
+#useless{
+    position: absolute;
+    /* width: 8vw;
+    height: auto; */
+    background: none;
+    border: none;
+}
+#inv-btn-img{
+    height: 8vh;
+    width: 5vw;
+    z-index: 5;
+}
+
+.close{
+    /* display: none; */
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    right: 5px;
+    transition: 0.3s;
+    background: url('cross4.png');
+    background-size: cover;
+    border: none;
+    z-index: 22;
+}
+  
+.close:hover{
+    cursor: pointer;
+    background: url('cross6.png');
+    background-size: cover;
+}
+
+/* .close3{ */
+    /* display: none; */
+    /* height: 40px;
+    width: 40px;
+    position: absolute;
+    margin-top: 18vh;
+    margin-left: 53vw;
+    transition: 0.3s;
+    background: url('cross4.png');
+    background-size: cover;
+    border: none;
+    z-index: 22;
+} */
+/* 
+.close3:hover{
+    cursor: pointer;
+    background: url('cross6.png');
+    background-size: cover;
+} */
+
+#inv-screen{
+    display: none;
+    position: fixed; 
+    /* text-align: center; */
+    width: 100%; 
+    height: 100%; 
+    overflow: hidden; 
+    background-color: rgba(0, 0, 0, 0);
+    /* background-color: rgba(255, 0, 0, 0.514); */
+    animation-name: zoom;
+    animation-duration: 0.5s;
+    transform-origin: bottom right;
+    z-index: 19;
+}
+
+/* #sellInv{
+    display: none;
+    position: fixed; 
+    /* text-align: center; */
+    /* width: 100%; 
+    height: 100%; 
+    overflow: hidden; 
+    background-color: rgba(0, 0, 0, 0);
+    animation-name: zoom;
+    animation-duration: 0.5s;
+    transform-origin: bottom left;
+    z-index: 19;
+}  */
+
+  
+@keyframes zoom {
+    from{
+        transform: scale(0.1);
+    } 
+    to{
+        transform: scale(1);
+    }
+}
+
+#canvas, #canvas3/*, #canvas4*/{
+    
+    /* background-image: url(inv_box.png); */
+    /* background-repeat: no-repeat; */
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    /* vertical-align: middle; */
+    /* top: 0;
+    height: 100vh;
+    width: 100vh;
+    min-width: 50px;
+    min-height: 50px; */
+    overflow: hidden;
+    /* margin-left: 10vw; */
+    z-index: 21;
+    position: absolute;
+}
+
+#canvas2{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0);
+    height: 100%;
+    width: 100%;
+
+    overflow: hidden;
+    z-index: 5;
+}
+#rocket{
+    display: none;
+    position: absolute;
+}
+
+#drawInv{
+    position: absolute;
+    margin-left: 60vw;
+    /* display: none; */
+    /* z-index: 20; */
+    /* display: none; */
+    /* position: fixed;  */
+    /* text-align: center; */
+    /* width: 100%;  */
+    /* height: 100%;  */
+    overflow: hidden; 
+    /* background-color: rgba(0, 0, 0, 0); */
+    /* background-color: rgba(255, 0, 0, 0.514); */
+    animation-name: zoom;
+    animation-duration: 0.5s;
+    transform-origin: bottom right;
+    z-index: 19;
+}
+#sellInv{
+    position: absolute;
+    margin-left: 2vw;
+    /* display: none; */
+}
+
+/* .places{
+    display: flex;
+}
+.places:hover{
+    border: blue;
+    border-width: 12px;
+} */
+#potionRed, #potionBlue, #camera, #bottle, #cake2, #cake3{
+    /* position: absolute; */
+    display: none;
+    /* z-index: 20; */
+    /* cursor: pointer; */
+}
+
+
+
+#pyramid_window{
+    height: auto;
+    width: 50%;
+    display: none;
+    margin-left: 22vw;
+}
+#computer_window{
+    height: auto;
+    width: 50%;
+    display: none;
+    margin-left: 22vw;
+}
+#alien_window{
+    height: auto;
+    width: 50%;
+    display: none;
+    margin-left: 22vw;
+}
+#space_window{
+    height: auto;
+    width: 50%;
+    display: none;
+    margin-left: 22vw;
+}
+#window{
+    display: none;
+    position: fixed; 
+    width: 100%; 
+    height: 100%; 
+    overflow: hidden; 
+    background-color: rgba(0, 0, 0, 0);
+    animation-name: zoom;
+    animation-duration: 0.5s;
+    z-index: 19;
+}
+.enter{
+    height: 8%;
+    width: 10%;
+    position: absolute;
+    margin-left: 42vw;
+    margin-top: 60vh;
+    transition: 0.3s;
+    background: url('enter.png');
+    background-size: cover;
+    border: none;
+    z-index: 22;
+}
+.enter:hover{
+    cursor: pointer;
+    background: url('enter2.png');
+    background-size: cover;
+}
+.close2{
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    /* right: 5px; */
+    margin-left: 67vw;
+    margin-top: 25px;
+    transition: 0.3s;
+    background: url('cross1.png');
+    background-size: cover;
+    border: none;
+    z-index: 22;
+}
+  
+.close2:hover{
+    cursor: pointer;
+    background: url('cross2.png');
+    background-size: cover;
+}
+
+
+
+/* bad code */
+#confirm_purchase, #confirm_purchase2{
+    display: none;
+    position: absolute;
+    margin-left: 35vw;
+    margin-top: 30vh;
+    z-index: 20;
+    width: 30vw;
+    height: auto;
+}
+/* #confirm_purchase2{
+    display: none;
+    position: absolute;
+    margin-left: 35vw;
+    margin-top: 30vh;
+    z-index: 20;
+    width: 30vw;
+    height: auto;
+} */
+.yes, .yes2{
+    display: none;
+    height: 5.5%;
+    width: 7%;
+    position: absolute;
+    margin-left: 40vw;
+    margin-top: 63vh;
+    transition: 0.3s;
+    background: url('yes.png');
+    background-size: cover;
+    border: none;
+    z-index: 22;
+}
+/* .yes2{
+    display: none;
+    height: 5.5%;
+    width: 7%;
+    position: absolute;
+    margin-left: 40vw;
+    margin-top: 63vh;
+    transition: 0.3s;
+    background: url('yes.png');
+    background-size: cover;
+    border: none;
+    z-index: 22;
+} */
+.yes:hover, .yes2:hover{
+    cursor: pointer;
+    background: url('yes1.png');
+    background-size: cover;
+}
+.no, .no2{
+    display: none;
+    height: 5.5%;
+    width: 7%;
+    position: absolute;
+    margin-left: 52vw;
+    margin-top:  63vh;
+    transition: 0.3s;
+    background: url('no.png');
+    background-size: cover;
+    border: none;
+    z-index: 22;
+}
+/* .no2{
+    display: none;
+    height: 5.5%;
+    width: 7%;
+    position: absolute;
+    margin-left: 52vw;
+    margin-top:  63vh;
+    transition: 0.3s;
+    background: url('no.png');
+    background-size: cover;
+    border: none;
+    z-index: 22;
+} */
+.no:hover, .no2:hover{
+    cursor: pointer;
+    background: url('no1.png');
+    background-size: cover;
+}
