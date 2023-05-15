@@ -1,3 +1,5 @@
+// document.getElementsByTagName("body")[0].style.cursor = "url('./images/mouse.png'), auto";
+
 // var bgMusic;
 
 // function start(){
@@ -23,11 +25,11 @@ var last_click = 1;//was it seller's or your inventory's click ?
 //only two type => no need of 0 and 1 keep only 0 -done-
 //can also be used for owned and not owned //MONEY CASE -done-
 
-//USE AND THROW VARIABLES -> REUSABLE
-var purchaseCake2 = 0, purchaseCake3 = 0, confirm1 = -1, display = 1, display2 = 1, price = 200, break_barrier = 0, break_barrier2 = 0;
+//USE AND THROW VARIABLES -> MAKE REUSABLE
+var purchaseCake2 = 0, purchaseCake3 = 0, confirm1 = -1, display = 1, display2 = 1, price = 200, break_barrier = 0, break_barrier2 = 0, blockBGclick = 0;
 //DEBUG CONFIRM1 AND DISPLAY CODE -done-
 //REDUCE SIMILAR WORKING VARIABLES
-
+var digClkCnt = 0;
 //to avoid error don't allow your items to go to seller because there are no selling options (YET) -done-
 
 document.addEventListener('keyup', function(event2){
@@ -37,7 +39,7 @@ document.addEventListener('keyup', function(event2){
 
 
 
-//if you press enter after opening the description box, both open simultaneously
+//if you press enter near seller after opening the description box, both open simultaneously
 
 
 //for the close button on inventory
@@ -127,9 +129,10 @@ var no2 = document.getElementsByClassName('no2')[0];
 var confirm_purchase2 = document.getElementById('confirm_purchase2');
 //IMPROVE THIS CODE
 
-//DONT ALLOW TO CLICK IN BACKGROUND WHEN SCREEN IS DISPLAYED 
+//DONT ALLOW TO CLICK IN BACKGROUND WHEN SCREEN IS DISPLAYED -done-
 function confirmPurchase(){
     if(display == 1){
+    blockBGclick = 1;
     confirm_purchase.style.display = "block";
     yes.style.display = "block";
     no.style.display = "block";
@@ -137,6 +140,7 @@ function confirmPurchase(){
 }
 function confirmPurchase2(){
     if(display2 == 1){
+    blockBGclick = 1;
     confirm_purchase2.style.display = "block";
     yes2.style.display = "block";
     no2.style.display = "block";
@@ -149,6 +153,7 @@ yes.onclick = function(){
     no.style.display = "none";
     confirm1 = 1; 
     display = 0;
+    blockBGclick = 0;
 }
 no.onclick = function(){
     confirm_purchase.style.display = "none";
@@ -156,6 +161,7 @@ no.onclick = function(){
     no.style.display = "none";
     confirm1 = 0;
     display = 0;
+    blockBGclick = 0;
     board[xi][yi] = 0;
     for(let i=0; i<4; i++){
         for(let j=0; j<5; j++){
@@ -173,6 +179,7 @@ yes2.onclick = function(){
     no2.style.display = "none";
     confirm1 = 1; 
     display2 = 0;
+    blockBGclick = 0;
 }
 no2.onclick = function(){
     confirm_purchase2.style.display = "none";
@@ -180,6 +187,7 @@ no2.onclick = function(){
     no2.style.display = "none";
     confirm1 = 0;
     display2 = 0;
+    blockBGclick = 0;
     board[xi][yi] = 0;
    
     for(let i=0; i<4; i++){
@@ -194,10 +202,18 @@ no2.onclick = function(){
 }
 
 // DEBUG WALKING !
-//NOTE : READABILITY IS THE ABSOLUTE HALLMARK OF WRITING GOOD CODE !!
+// NOTE : READABILITY IS THE ABSOLUTE HALLMARK OF WRITING GOOD CODE !!
 
 
 document.addEventListener('keydown', function(event){
+
+    if(digClkCnt == 1 && event.keyCode == 32){
+        // dialogue2();
+        digBox.style.display = "none";
+        dig1.innerHTML = '';
+        dig2.innerHTML = '';
+    }
+
     if(left_margin>557 && left_margin<653 && top_margin>472 && event.keyCode == 13){
         screen.style.display = "block";
         sellInv.style.display = "block";
@@ -333,7 +349,7 @@ canvas.addEventListener('mousemove', function(move){
 canvas.addEventListener('click', function(click1){
     // console.table(board);
     
-    if(click1.x > topX &&  click1.x < 1215 && click1.y > topY &&  click1.y < 520){
+    if(click1.x > topX &&  click1.x < 1215 && click1.y > topY &&  click1.y < 520 && blockBGclick == 0){
         xi = Math.floor((click1.x - topX)/100);
         yi = Math.floor((click1.y - topY)/100);
         // console.log(xi, yi);
@@ -395,7 +411,7 @@ canvas.addEventListener('click', function(click1){
         // console.log('yi = ',yi);
     }
 
-    else if(click1.x > 77 &&  click1.x < 461 && click1.y > 51 && click1.y < 521){
+    else if(click1.x > 77 &&  click1.x < 461 && click1.y > 51 && click1.y < 521 && blockBGclick == 0){
         if(disable_inventory_click == 0){
         xi_sell = Math.floor((click1.x - 77)/100);
         yi_sell = Math.floor((click1.y - 51)/100);
@@ -688,8 +704,73 @@ function writeMoney(){
     ctx.closePath();
 }
 
+var continuee = 0, i = 0;
+var txt1 = "Hello there. I'm Thallus The Merchant.";
+var txt1_1 = 'Pree space to continue.';
+var txt2 = 'Press Up, Down, Left and Right arrow';
+var txt2_1 = 'keys to move';
+var speed = 100;
 
+// if dialogue initiated and clicking
 
+// clicking several times speeds it up
+function typeWriter(){
+    if(continuee == 0){
+        if(i < txt1.length){
+            dig1.innerHTML += txt1.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+        }
+    }
+    if(i == txt1.length){
+        continuee += 1;
+        i = 0;
+    }
+    if(continuee == 1){
+        if(i < txt1_1.length){
+            dig2.innerHTML += txt1_1.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+        }  
+    }
+}
+
+// function typeWriter2(){
+//     if(continuee == 1){
+//         if(k < txt2.length){
+//             dig3.innerHTML += txt2.charAt(i);
+//             k++;
+//             setTimeout(typeWriter, speed);
+//         }
+//     }
+//     if(k == txt2.length){
+//         continuee += 1;
+//         k = 0;
+//     }
+//     if(continuee == 2){
+//         if(k < txt2_1.length){
+//             dig4.innerHTML += txt2_1.charAt(i);
+//             k++;
+//             setTimeout(typeWriter, speed);
+//         }  
+//     }
+// }
+
+var digBox = document.getElementById('digBox');
+var dig1 = document.getElementById("part1");
+var dig2 = document.getElementById("part2");
+// var dig3 = document.getElementById("part3");
+// var dig4 = document.getElementById("part4");
+
+function dialogue(){
+    if(digClkCnt == 0){
+    digBox.style.display = "block";
+    typeWriter();
+    digClkCnt = 1;
+    }
+}
+
+// add hovering on seller effect like that in fate
 
 function animate(){
 
@@ -715,8 +796,8 @@ function animate(){
     if(clearHalf == 0)
         writeMoney();
         //instead of writeStuff(); display something else like buying options. 
-    // console.log('cursor_drawn : ', cursor_drawn);
-    
+        // console.log('cursor_drawn : ', cursor_drawn);
+        
     requestAnimationFrame(animate);
 }
 animate();
@@ -794,9 +875,9 @@ class particles2{
     }
 }
 
-//IMPROVE THE ROCKET-ARRAY CODE
-//the array is useless now. IMPORTANT
-const oneRocket = [];
+//IMPROVE THE ROCKET-ARRAY CODE -done...?-
+//the array is useless now. IMPORTANT -done-
+var oneRocket;
 
 const cord = {
     x : undefined,
@@ -830,13 +911,13 @@ class Rocket{
 
 //why does rocket move fast on clicking it continuously ? -done-
 function generateRocket(){
-    oneRocket.push(new Rocket());
+    oneRocket = new Rocket();
 }
 generateRocket();
 
 function drawRocket(){
-    oneRocket[0].updateR();
-    oneRocket[0].drawR();
+    oneRocket.updateR();
+    oneRocket.drawR();
 }
 //drawRocket();
    

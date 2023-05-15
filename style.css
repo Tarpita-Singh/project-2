@@ -560,3 +560,37 @@ a:hover img:first-child {
     background: url('./images/no1.png');
     background-size: cover;
 }
+
+#part1, #part3{
+    color: white;
+    position: absolute;
+    text-align: center;
+    font-size: 1.2vw;
+    font-family: 'Kanit', sans-serif;
+    font-family: 'Silkscreen', cursive;
+    margin-left: 37vw;
+    z-index: 26;
+    margin-top: 44vh;
+}
+
+#part2, #part4{
+    color: white;
+    position: absolute;
+    text-align: center;
+    font-size: 1.2vw;
+    font-family: 'Kanit', sans-serif;
+    font-family: 'Silkscreen', cursive;
+    margin-left: 37vw;
+    z-index: 26;
+    margin-top: 48vh;
+}
+
+#digBox{
+    position: absolute;
+    width: 40vw;
+    height: auto;
+    margin-left: 28vw;
+    margin-top: 40vh;
+    z-index: 25;
+    display: none;
+}
