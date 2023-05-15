@@ -288,8 +288,8 @@ function updateClick(current_key){
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+canvas.width = 1292;
+canvas.height = 668;
 
 const center = {
     x: window.innerWidth/2,
@@ -830,8 +830,8 @@ animate();
 const canvas2 = document.getElementById('canvas2');
 const ctx2 = canvas2.getContext('2d');
 
-canvas2.width = window.innerWidth;
-canvas2.height = window.innerHeight;
+canvas2.width = 1292;
+canvas2.height = 668;
 
 const center2 = {
     x: window.innerWidth/2,
