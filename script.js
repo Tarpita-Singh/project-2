@@ -288,8 +288,8 @@ function updateClick(current_key){
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
-canvas.width = 1292;
-canvas.height = 668;
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
 
 const center = {
     x: window.innerWidth/2,
@@ -706,7 +706,7 @@ function writeMoney(){
 
 var continuee = 0, i = 0;
 var txt1 = "Hello there. I'm Thallus The Merchant.";
-var txt1_1 = 'Pree space to continue.';
+var txt1_1 = 'Press space to continue.';
 var txt2 = 'Press Up, Down, Left and Right arrow';
 var txt2_1 = 'keys to move';
 var speed = 100;
@@ -830,8 +830,8 @@ animate();
 const canvas2 = document.getElementById('canvas2');
 const ctx2 = canvas2.getContext('2d');
 
-canvas2.width = 1292;
-canvas2.height = 668;
+canvas2.width = window.innerWidth;
+canvas2.height = window.innerHeight;
 
 const center2 = {
     x: window.innerWidth/2,
