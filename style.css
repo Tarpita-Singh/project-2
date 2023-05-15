@@ -396,7 +396,7 @@ a:hover img:first-child {
 }
 
 #canvas, #canvas3{
-    
+    aspect-ratio: auto 1292 / 668;
     top: 0;
     left: 0;
     height: 100%;
@@ -407,6 +407,7 @@ a:hover img:first-child {
 }
 
 #canvas2{
+    aspect-ratio: auto 1292 / 668;
     position: fixed;
     top: 0;
     left: 0;
